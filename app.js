@@ -2,7 +2,7 @@ const app = () =>{
 	const song = document.querySelector('.song');
 	const play = document.querySelector('.play');
 	const outline = document.querySelector('.moving-outline circle');
-	const video = document.querySelector('.vid-container video');
+	//const video = document.querySelector('.vid-container video');
 
 	//Sounds
 	const sounds = document.querySelectorAll('.sound-picker button');
@@ -21,7 +21,7 @@ const app = () =>{
 	sounds.forEach(sound =>{
 		sound.addEventListener('click',function(){
 			song.src = this.getAttribute('data-sound');
-			video.src = this.getAttribute('data-video');
+			//video.src = this.getAttribute('data-video');
 		});
 	});
 
@@ -44,11 +44,11 @@ const app = () =>{
 	const checkPlaying = song =>{
 		if(song.paused){
 		song.play();
-		video.play();
+		//video.play();
 		play.src = './svg/pause.svg';
 	}else{
 		song.pause();
-		video.pause();
+		//video.pause();
 		play.src = './svg/play.svg';
 	}
 	};
@@ -71,7 +71,7 @@ const app = () =>{
 			song.pause();
 			song.currentTime = 0;
 			play.src = './svg/play.svg';
-			video.pause();
+			//video.pause();
 		}
 	};
 	
